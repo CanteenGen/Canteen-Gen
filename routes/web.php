@@ -19,7 +19,7 @@ Route::match(['get', 'post'], '/checkout', [CheckOutControl::class, 'checkOut'])
 // PembayaranControl routes
 Route::get('/pembayaran', [PembayaranControl::class, 'display']);
 Route::post('/pembayaran/confirm', [PembayaranControl::class, 'confirm']);
-Route::post('/create-order', [PembayaranControl::class, 'clickBuatPesanan']);
+Route::match(['get', 'post'], '/create-order', [PembayaranControl::class, 'clickBuatPesanan']);
 Route::post('/payment', [PembayaranControl::class, 'pay']);
 Route::get('/status', [PembayaranControl::class, 'showStatus']);
 

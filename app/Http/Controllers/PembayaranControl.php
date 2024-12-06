@@ -24,6 +24,10 @@ class PembayaranControl extends Controller
     {
         $orderId = 'ORD-' . time();
         
+        if ($request->isMethod('get')) {
+            return redirect('/pembayaran');
+        }
+        
         return Inertia::render('QRPage', [
             'orderId' => $orderId,
             'total' => $request->total
@@ -32,12 +36,15 @@ class PembayaranControl extends Controller
 
     public function pay(Request $request)
     {
-        // For demo, just return success without database interaction
+        if ($request->ajax()) {
+            return response()->noContent();
+        }
+        return redirect()->back();
     }
 
     public function showStatus()
     {
-        return response()->json(['success' => true]);
+        return response()->noContent();
     }
 }
 

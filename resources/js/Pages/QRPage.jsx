@@ -25,10 +25,6 @@ export default function QRPage({ orderId, total }) {
     }, [])
 
     const handlePayment = () => {
-        router.post('/payment', {
-            orderId,
-            total
-        })
         setPaymentStatus('success')
     }
 
