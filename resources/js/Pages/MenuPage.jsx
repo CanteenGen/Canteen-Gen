@@ -5,13 +5,12 @@ import { Button } from '@/Components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 
 export default function MenuPage() {
-  const melakukanPemesanan = () => {
-    router.visit('/keranjang')
-  }
 
   const clickButton = (type) => {
     if (type === 'Masukkan Keranjang') {
       router.post('/cart/add', { item: 'Sample Item' })
+    } else if (type === 'Bayar Sekarang') {
+      router.visit('/keranjang')
     }
   }
 
@@ -40,7 +39,9 @@ export default function MenuPage() {
           </Card>
         </div>
         <div className="mt-8">
-          <Button onClick={melakukanPemesanan}>Lihat Keranjang</Button>
+          <Button onClick={() => clickButton('Bayar Sekarang')}>
+                Bayar Sekarang
+          </Button>
         </div>
       </div>
     </MainLayout>
