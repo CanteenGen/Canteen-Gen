@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaksi extends Model
+class Antrian extends Model
 {
-    use HasFactory;
+    //
 
     use HasFactory;
-    protected $table = "transaksi";
+    protected $table = "antrian";
     protected $guarded = [];
     public $timestamps = false;
-
-
- 
 }
-

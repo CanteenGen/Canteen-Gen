@@ -16,13 +16,13 @@ export default function MenuPage() {
 
   return (
     <MainLayout>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-8">Menu Warung Bu Ridho</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="container px-4 py-8 mx-auto">
+        <h1 className="mb-8 text-2xl font-bold">Menu Warung Bu Ridho</h1>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardContent className="p-4">
-              <h2 className="text-xl font-semibold mb-2">Tahu Telor</h2>
-              <p className="text-gray-600 mb-4">Rp13,000</p>
+              <h2 className="mb-2 text-xl font-semibold">Tahu Telor</h2>
+              <p className="mb-4 text-gray-600">Rp13,000</p>
               <Button onClick={() => clickButton('Masukkan Keranjang')}>
                 Masukkan Keranjang
               </Button>
@@ -30,8 +30,8 @@ export default function MenuPage() {
           </Card>
           <Card>
             <CardContent className="p-4">
-              <h2 className="text-xl font-semibold mb-2">Nasi Goreng</h2>
-              <p className="text-gray-600 mb-4">Rp13,000</p>
+              <h2 className="mb-2 text-xl font-semibold">Nasi Goreng</h2>
+              <p className="mb-4 text-gray-600">Rp13,000</p>
               <Button onClick={() => clickButton('Masukkan Keranjang')}>
                 Masukkan Keranjang
               </Button>

@@ -5,16 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaksi extends Model
+class Warung extends Model
 {
+    //
     use HasFactory;
-
-    use HasFactory;
-    protected $table = "transaksi";
+    protected $table = "warung";
     protected $guarded = [];
     public $timestamps = false;
-
-
- 
 }
-

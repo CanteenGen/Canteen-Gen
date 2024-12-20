@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaksi extends Model
+class Menu extends Model
 {
-    use HasFactory;
+    //
 
     use HasFactory;
-    protected $table = "transaksi";
+    protected $table = "menus";
     protected $guarded = [];
     public $timestamps = false;
-
-
- 
 }
-

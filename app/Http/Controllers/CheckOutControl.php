@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -9,6 +10,8 @@ class CheckOutControl extends Controller
 {
     public function clickKeranjang(Request $request)
     {
+        
+    
         // Logic to add item to cart
         // In a real application, you would typically save this to the session or database
         return response()->json(['success' => true, 'message' => 'Item added to cart']);
